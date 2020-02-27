@@ -1,5 +1,9 @@
 <?php
 session_start();
+include('conexao.php');
+
+$consulta = "SELECT * FROM attr_usuario";
+$con = $mysqli->query($consulta) or die($mysqli->error);
 ?>
 
 <!DOCTYPE html>
@@ -33,13 +37,13 @@ session_start();
 		<div class="container-login100">
 			<div class="wrap-login100 p-l-50 p-r-50 p-t-77 p-b-30">
                             
-				<form action="/login_system/pets_system/index.html" method="POST" class="login100-form validate-form">
+				<form action="/login_system/verifica_login.php" method="POST" class="login100-form validate-form">
 					<span class="login100-form-title p-b-55">
 						ATTR PET
 					</span>
 
 					<div class="wrap-input100 validate-input m-b-16" data-validate = "CPF ou CNPJ é obrigatório">
-						<input class="input100" type="text" name="cpfcpnj" placeholder="CPF / CNPJ">
+						<input class="input100" type="text" id="login" name="login" placeholder="CPF / CNPJ">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<span class="fa fa-id-card-o"></span>
@@ -47,14 +51,14 @@ session_start();
 					</div>
 
 					<div class="wrap-input100 validate-input m-b-16" data-validate = "Senha é obrigatória">
-						<input class="input100" type="password" name="senha" placeholder="Senha">
+						<input class="input100" type="password" id="senha" name="senha" placeholder="Senha">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<span class="lnr lnr-lock"></span>
 						</span>
 					</div>
 					<div class="container-login100-form-btn p-t-25">
-						<button type="submit" class="login100-form-btn">
+						<button type="submit" id="entrar" name="entrar" class="login100-form-btn">
 							Login
 						</button>
                     </div>

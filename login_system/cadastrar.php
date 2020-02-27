@@ -2,28 +2,18 @@
 session_start();
 include("conexao.php");
 
-$nome = mysqli_real_escape_string($conexao, trim($_POST['nome']));
-$usuario = mysqli_real_escape_string($conexao, trim($_POST['usuario']));
-$senha = mysqli_real_escape_string($conexao, trim(md5($_POST['senha'])));
+$id = mysqli_real_escape_string($mysqli, trim($_POST['usu_id']));
+$tipo_acesso = mysqli_real_escape_string($mysqli, trim($_POST['usu_tip_acs']));
+$nome = mysqli_real_escape_string($mysqli, trim($_POST['usu_nome']));
+$email = mysqli_real_escape_string($mysqli, trim($_POST['usu_email']));
+$senha = mysqli_real_escape_string($mysqli, trim(($_POST['usu_senha'])));
+$cpf = mysqli_real_escape_string($mysqli, trim(($_POST['usu_cpf'])));
 
-$sql = "select count(*) as total from usuario where usuario = '$usuario'";
-$result = mysqli_query($conexao, $sql);
-$row = mysqli_fetch_assoc($result);
+$sql = "INSERT INTO attr_usuario (usu_id, usu_tip_acs, usu_nome, usu_email, usu_senha, usu_cpf) VALUES ('$id', '$tipo_acesso', '$nome', '$email', '$senha', '$cpf')";
+$cadastrar = $mysqli->query($sql) or die($mysqli->error);
 
-if($row['total'] == 1) {
-	$_SESSION['usuario_existe'] = true;
-	header('Location: cadastro.php');
-	exit;
-}
+$mysqli->close();
 
-$sql = "INSERT INTO usuario (nome, usuario, senha, data_cadastro) VALUES ('$nome', '$usuario', '$senha', NOW())";
-
-if($conexao->query($sql) === TRUE) {
-	$_SESSION['status_cadastro'] = true;
-}
-
-$conexao->close();
-
-header('Location: cadastro.php');
+header("Location:/login_system/pets_system/index.php");
 exit;
 ?>
