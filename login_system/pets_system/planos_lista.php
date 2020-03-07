@@ -1,3 +1,11 @@
+<?php
+session_start();
+include('../conexao.php');
+
+$consulta = "SELECT * FROM attr_planos";
+$con = $mysqli->query($consulta) or die($mysqli->error);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -90,7 +98,7 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="celulas_lista.html">Células</a></li>
+              <li><a class="" href="celulas_lista.php">Células</a></li>
             </ul>
           </li>
           <li class="sub-menu">
@@ -100,8 +108,8 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="beneficios_lista.html">Benefícios</a></li>
-              <li><a class="" href="planos_lista.html">Planos</a></li>
+              <li><a class="" href="beneficios_lista.php">Benefícios</a></li>
+              <li><a class="" href="planos_lista.php">Planos</a></li>
             </ul>
           </li>
           <li class="sub-menu">
@@ -111,7 +119,7 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="plataformas_lista.html">Plataformas</a></li>
+              <li><a class="" href="plataformas_lista.php">Plataformas</a></li>
             </ul>
           </li>
           <li class="sub-menu">
@@ -172,7 +180,7 @@
         </div>
         <!-- page start-->
         <a class="btn btn-info" href="" style="background-color: green; position: relative; float: right;" title="Bootstrap 3 themes generator">Atualizar</a>
-        <a class="btn btn-info" href="" style="position: relative; float: right;" title="Bootstrap 3 themes generator">Novo</a>
+        <a class="btn btn-info" href="planos_cadastro.html" style="position: relative; float: right;" title="Bootstrap 3 themes generator">Novo</a>
         <br>
         <br>
         <div class="row">
@@ -199,17 +207,21 @@
                       <tr>
                         <th>ID</th>
                         <th>Plano</th>
-                        <th>Observações</th>
+                        <th>Descritivo</th>
+                        <th>Valor</th>
                         <th>Status</th>
                       </tr>
                     </thead>
                     <tbody>
+                      <?php while($dado = $con->fetch_array()){ ?>
                       <tr>
-                        <td>1</td>
-                        <td>Pet Premium</td>
-                        <td>N/A</td>
-                        <td>Ativo</td>
+                        <td><?php echo $dado["id"]; ?></td>
+                        <td><?php echo $dado["plano"]; ?></td>
+                        <td><?php echo $dado["descritivo"]; ?></td>
+                        <td><?php echo $dado["valor"]; ?></td>
+                        <td><?php echo $dado["status"]; ?></td>
                       </tr>
+                      <?php } ?>
                     </tbody>
                   </table>
                 </div>

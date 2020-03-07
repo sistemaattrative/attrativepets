@@ -90,7 +90,7 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="celulas_lista.html">Células</a></li>
+              <li><a class="" href="celulas_lista.php">Células</a></li>
             </ul>
           </li>
           <li class="sub-menu">
@@ -100,8 +100,8 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="beneficios_lista.html">Benefícios</a></li>
-              <li><a class="" href="planos_lista.html">Planos</a></li>
+              <li><a class="" href="beneficios_lista.php">Benefícios</a></li>
+              <li><a class="" href="planos_lista.php">Planos</a></li>
             </ul>
           </li>
           <li class="sub-menu">
@@ -111,7 +111,7 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="plataformas_lista.html">Plataformas</a></li>
+              <li><a class="" href="plataformas_lista.php">Plataformas</a></li>
             </ul>
           </li>
           <li class="sub-menu">
@@ -188,6 +188,8 @@
                   <h4><b>Editado:</b> Administrador (25/01/2020 17:10)</h4>
                   
                   <br>
+                  <form action="../cadastrar_plataforma.php" method="POST">
+
                   <label class="col-sm-2 control-label"><b>Pode editar</b></label>
                   <div class="col-sm-10">
                     <input type="checkbox" class="checkbox form-control">
@@ -197,23 +199,39 @@
                     <input type="checkbox" class="checkbox form-control">
                   </div>
                   <div class="form-group">
-                    <label class="col-sm-2 control-label"><b>Célula</b></label>
-                    <div class="col-sm-10">
-                      <input type="text" class="form-control round-input">
-                    </div>
-                    <br><br>
-                    <label class="col-sm-2 control-label"><b>Observações</b></label>
-                    <div class="col-sm-10">
-                      <input type="text" class="form-control round-input">
-                    </div>
-                    <label class="col-sm-2 control-label"><b>Inativo</b></label>
-                    <div class="col-sm-10">
-                      <input type="checkbox" class="checkbox form-control">
-                    </div>
+                      <label class="col-sm-2 control-label"><b>ID</b></label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control round-input" name="id">
+                      </div>
+                      <br><br>
+                      <label class="col-sm-2 control-label"><b>Nome</b></label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control round-input" name="nome_plataforma">
+                      </div>
+                      <label class="col-sm-2 control-label"><b>Repasse</b></label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control round-input" name="repasse_adesao">
+                      </div>
+                      <br><br>
+                      <label class="col-sm-2 control-label"><b>Senha</b></label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control round-input" name="senha">
+                      </div>
+                      <br><br>
+                      <label class="col-sm-2 control-label"><b>CNPJ</b></label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control round-input" name="cnpj">
+                      </div>
+                      <label class="col-sm-2 control-label"><b>Inativo</b></label>
+                      <div class="col-sm-10">
+                        <input type="checkbox" class="checkbox form-control">
+                      </div>
                   </div>
-                  <a class="btn btn-info" href="" style="background-color: green; position: relative; float: right;" title="Bootstrap 3 themes generator">Salvar</a>
-                  <a class="btn btn-info" href="" style="background-color: red; position: relative; float: right;" title="Bootstrap 3 themes generator">Voltar</a>
+                  <button type="submit" class="btn btn-info" style="background-color: green; position: relative; float: right;">Cadastrar</button>
+                  <button onClick="history.forward()" class="btn btn-info" href="" style="background-color: red; position: relative; float: right;">Voltar</a>
                 </div>
+
+              </form>
 
               </section>
             </div>

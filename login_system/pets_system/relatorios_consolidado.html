@@ -90,7 +90,7 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="celulas_lista.html">Células</a></li>
+              <li><a class="" href="celulas_lista.php">Células</a></li>
             </ul>
           </li>
           <li class="sub-menu">
@@ -100,8 +100,8 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="beneficios_lista.html">Benefícios</a></li>
-              <li><a class="" href="planos_lista.html">Planos</a></li>
+              <li><a class="" href="beneficios_lista.php">Benefícios</a></li>
+              <li><a class="" href="planos_lista.php">Planos</a></li>
             </ul>
           </li>
           <li class="sub-menu">
@@ -111,7 +111,7 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="plataformas_lista.html">Plataformas</a></li>
+              <li><a class="" href="plataformas_lista.php">Plataformas</a></li>
             </ul>
           </li>
           <li class="sub-menu">

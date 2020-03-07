@@ -1,3 +1,11 @@
+<?php
+session_start();
+include('../conexao.php');
+
+$consulta = "SELECT * FROM attr_plataforma";
+$con = $mysqli->query($consulta) or die($mysqli->error);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -90,7 +98,7 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="celulas_lista.html">Células</a></li>
+              <li><a class="" href="celulas_lista.php">Células</a></li>
             </ul>
           </li>
           <li class="sub-menu">
@@ -100,8 +108,8 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="beneficios_lista.html">Benefícios</a></li>
-              <li><a class="" href="planos_lista.html">Planos</a></li>
+              <li><a class="" href="beneficios_lista.php">Benefícios</a></li>
+              <li><a class="" href="planos_lista.php">Planos</a></li>
             </ul>
           </li>
           <li class="sub-menu">
@@ -111,7 +119,7 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="plataformas_lista.html">Plataformas</a></li>
+              <li><a class="" href="plataformas_lista.php">Plataformas</a></li>
             </ul>
           </li>
           <li class="sub-menu">
@@ -172,7 +180,7 @@
         </div>
         <!-- page start-->
         <a class="btn btn-info" href="" style="background-color: green; position: relative; float: right;" title="Bootstrap 3 themes generator">Atualizar</a>
-        <a class="btn btn-info" href="" style="position: relative; float: right;" title="Bootstrap 3 themes generator">Novo</a>
+        <a class="btn btn-info" href="plataformas_cadastro.html" style="position: relative; float: right;" title="Bootstrap 3 themes generator">Novo</a>
         <br>
         <br>
         <div class="row">
@@ -198,36 +206,20 @@
                     <thead>
                       <tr>
                         <th>ID</th>
-                        <th>Plataformas</th>
-                        <th>Nome Fantasia</th>
-                        <th>CNPJ</th>
-                        <th>Telefone 1</th>
-                        <th>Telefone 2</th>
-                        <th>Cidade</th>
+                        <th>Plataforma</th>
+                        <th>Repasse</th>
                         <th>Ativo</th>
                       </tr>
                     </thead>
                     <tbody>
+                      <?php while($dado = $con->fetch_array()){ ?>
                       <tr>
-                        <td>1</td>
-                        <td>Ponto Negócios</td>
-                        <td>PP Negócios</td>
-                        <td>123.456.789-98</td>
-                        <td>(19)9876-1234</td>
-                        <td>(19)9876-1234</td>
-                        <td>São Bernardo do Campo</td>
-                        <td>Ativo</td>
+                      <td><?php echo $dado["id"]; ?></td>
+                        <td><?php echo $dado["nome_plataforma"]; ?></td>
+                        <td><?php echo $dado["repasse_adesao"]; ?></td>
+                        <td><?php echo $dado["status"]; ?></td>
                       </tr>
-                      <tr>
-                          <td>2</td>
-                          <td>People Online</td>
-                          <td>PP Online</td>
-                          <td>123.456.789-98</td>
-                          <td>(19)9876-1234</td>
-                          <td>(19)9876-1234</td>
-                          <td>Campinas</td>
-                          <td>Ativo</td>
-                      </tr>
+                      <?php } ?>
                     </tbody>
                   </table>
                 </div>

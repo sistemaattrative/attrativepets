@@ -90,7 +90,7 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="celulas_lista.html">Células</a></li>
+              <li><a class="" href="celulas_lista.php">Células</a></li>
             </ul>
           </li>
           <li class="sub-menu">
@@ -100,7 +100,7 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="beneficios_lista.html">Benefícios</a></li>
+              <li><a class="" href="beneficios_lista.php">Benefícios</a></li>
               <li><a class="" href="planos_lista.html">Planos</a></li>
             </ul>
           </li>
@@ -186,33 +186,35 @@
                   <h3><b>Editando registro #1</b></h3>
                   <h4><b>Criado:</b> Administrador (25/01/2020 17:10)</h4>
                   <h4><b>Editado:</b> Administrador (25/01/2020 17:10)</h4>
-                  
                   <br>
-                  <label class="col-sm-2 control-label"><b>Pode editar</b></label>
-                  <div class="col-sm-10">
-                    <input type="checkbox" class="checkbox form-control">
-                  </div>
-                  <label class="col-sm-2 control-label"><b>Pode excluir</b></label>
-                  <div class="col-sm-10">
-                    <input type="checkbox" class="checkbox form-control">
-                  </div>
+                  <form action="../cadastrar_plano.php" method="POST">
                   <div class="form-group">
-                    <label class="col-sm-2 control-label"><b>Plano</b></label>
+                    <label class="col-sm-2 control-label"><b>ID</b></label>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control round-input">
+                      <input type="text" class="form-control round-input" name="id">
                     </div>
                     <br><br>
-                    <label class="col-sm-2 control-label"><b>Observações</b></label>
+                    <label class="col-sm-2 control-label"><b>Plano</b></label>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control round-input">
+                      <input type="text" class="form-control round-input" name="plano">
                     </div>
-                    <label class="col-sm-2 control-label"><b>Inativo</b></label>
+                    <label class="col-sm-2 control-label"><b>Descritivo</b></label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control round-input" name="descritivo">
+                    </div>
+                    <br><br>
+                    <label class="col-sm-2 control-label"><b>Valor</b></label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control round-input" name="valor">
+                    </div>
+                    <label class="col-sm-2 control-label"><b>Status</b></label>
                     <div class="col-sm-10">
                       <input type="checkbox" class="checkbox form-control">
                     </div>
                   </div>
-                  <a class="btn btn-info" href="" style="background-color: green; position: relative; float: right;" title="Bootstrap 3 themes generator">Salvar</a>
-                  <a class="btn btn-info" href="" style="background-color: red; position: relative; float: right;" title="Bootstrap 3 themes generator">Voltar</a>
+                  <button type="submit" class="btn btn-info" style="background-color: green; position: relative; float: right;">Cadastrar</button>
+                  <button onClick="history.forward()" class="btn btn-info" href="" style="background-color: red; position: relative; float: right;">Voltar</a>
+                </form>
                 </div>
 
               </section>
