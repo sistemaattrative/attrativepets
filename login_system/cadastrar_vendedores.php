@@ -14,6 +14,6 @@ $cadastrar = $mysqli->query($sql) or die($mysqli->error);
 
 $mysqli->close();
 
-header("Location:/login_system/pets_system/usuarios_lista.php");
+header("Location:/login_system/pets_system/vendedores_lista.php");
 exit;
 ?>

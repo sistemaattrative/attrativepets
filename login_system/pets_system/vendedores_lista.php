@@ -17,7 +17,7 @@ $con = $mysqli->query($consulta) or die($mysqli->error);
   <meta name="keyword" content="">
   <link rel="shortcut icon" href="img/favicon.png">
 
-  <title>Usuários | ATTRPETS</title>
+  <title>Usuários - Vendedores | ATTRPETS</title>
 
   <!-- Bootstrap CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -129,10 +129,9 @@ $con = $mysqli->query($consulta) or die($mysqli->error);
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="usuarios_lista.php">Admin Sistema</a></li>
-              <li><a class="" href="usuarios_lista.php">Admin Plataforma</a></li>
-              <li><a class="" href="usuarios_lista.php">Vendedores</a></li>
-              <li><a class="" href="usuarios_lista.php">Clientes</a></li>
+              <li><a class="" href="vendedores_lista.php">Clientes</a></li>
+              <li><a class="" href="vendedores_lista.php">Plataformas</a></li>
+              <li><a class="" href="vendedores_lista.php">Vendedores</a></li>
             </ul>
           </li>
           <li class="sub-menu">
@@ -172,10 +171,10 @@ $con = $mysqli->query($consulta) or die($mysqli->error);
           <div class="col-lg-12">
             <ol class="breadcrumb">
               <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
-              <li><i class="icon_lifesaver"></i>Usuários</li>
+              <li><i class="icon_lifesaver"></i>Usuários - Vendedores</li>
               <li>Lista</li>
             </ol>
-            <h3>Usuários</h3> <!-- Variável de nome de usuário vem aqui -->
+            <h3>Usuários - Vendedores</h3> <!-- Variável de nome de usuário vem aqui -->
           </div>
         </div>
         <!-- page start-->
