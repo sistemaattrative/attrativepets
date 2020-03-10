@@ -9,7 +9,7 @@
   <meta name="keyword" content="">
   <link rel="shortcut icon" href="img/favicon.png">
 
-  <title>Home | ATTRPETS</title>
+  <title>Clientes | ATTRPETS</title>
 
   <!-- Bootstrap CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -90,7 +90,7 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="celulas_lista.php">Células</a></li>
+              <li><a class="" href="celulas_lista.html">Células</a></li>
             </ul>
           </li>
           <li class="sub-menu">
@@ -100,8 +100,8 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="beneficios_lista.php">Benefícios</a></li>
-              <li><a class="" href="planos_lista.php">Planos</a></li>
+              <li><a class="" href="beneficios_lista.html">Benefícios</a></li>
+              <li><a class="" href="planos_lista.html">Planos</a></li>
             </ul>
           </li>
           <li class="sub-menu">
@@ -111,7 +111,7 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="plataformas_lista.php">Plataformas</a></li>
+              <li><a class="" href="plataformas_lista.html">Plataformas</a></li>
             </ul>
           </li>
           <li class="sub-menu">
@@ -121,9 +121,10 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="clientes_lista.php">Clientes</a></li>
-              <li><a class="" href="plataformas_lista.php">Plataformas</a></li>
+              <li><a class="" href="vendedores_lista.php">Admin Sistema</a></li>
+              <li><a class="" href="vendedores_lista.php">Admin Plataforma</a></li>
               <li><a class="" href="vendedores_lista.php">Vendedores</a></li>
+              <li><a class="" href="vendedores_lista.php">Clientes</a></li>
             </ul>
           </li>
           <li class="sub-menu">
@@ -163,14 +164,70 @@
           <div class="col-lg-12">
             <ol class="breadcrumb">
               <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
+              <li><i class="icon_lifesaver"></i>Clientes</li>
+              <li>Cadastro/Edição</li>
             </ol>
-            <h3>Olá, Administrador. Seja bem-vindo!</h3>
+            <h3>Clientes</h3> <!-- Variável de nome de usuário vem aqui -->
           </div>
         </div>
         <!-- page start-->
+        <div class="row">
+            <div class="col-lg-12">
+              <section class="panel">
+                <div style="float: right;" class="nav search-row" id="top_menu">
+                  <br>
+                 
+                </div>
+                <header class="panel-heading">
+                  Cadastro/Edição
+                </header>
 
-        <!-- Page content goes here -->
+                <div class="panel-body">
+                  <h3><b>Editando registro #1</b></h3>
+                  <h4><b>Criado:</b> Administrador (25/01/2020 17:10)</h4>
+                  <h4><b>Editado:</b> Administrador (25/01/2020 17:10)</h4>
+                  <form action="../cadastrar_cliente.php" method="POST">
+                    <br>
+                    <label class="col-sm-2 control-label"><b>Pode editar</b></label>
+                    <div class="col-sm-10">
+                      <input type="checkbox" class="checkbox form-control">
+                    </div>
+                    <label class="col-sm-2 control-label"><b>Pode excluir</b></label>
+                    <div class="col-sm-10">
+                      <input type="checkbox" class="checkbox form-control">
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label"><b>ID</b></label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control round-input" name="id">
+                      </div>
+                      <br><br>
+                      <label class="col-sm-2 control-label"><b>Nome</b></label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control round-input" name="nome">
+                      </div>
+                      <label class="col-sm-2 control-label"><b>Email</b></label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control round-input" name="email">
+                      </div>
+                      <br><br>
+                      <label class="col-sm-2 control-label"><b>CPF</b></label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control round-input" name="cpf">
+                      </div>
+                      <label class="col-sm-2 control-label"><b>Inativo</b></label>
+                      <div class="col-sm-10">
+                        <input type="checkbox" class="checkbox form-control">
+                      </div>
+                    </div>
+                    <button type="submit" class="btn btn-info" style="background-color: green; position: relative; float: right;">Cadastrar</button>
+                    <button onClick="history.forward()" class="btn btn-info" href="" style="background-color: red; position: relative; float: right;">Voltar</a>
+                  </form>
+                </div>
 
+              </section>
+            </div>
+          </div>
         <!-- page end-->
       </section>
     </section>

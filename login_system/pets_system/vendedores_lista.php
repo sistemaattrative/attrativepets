@@ -129,8 +129,8 @@ $con = $mysqli->query($consulta) or die($mysqli->error);
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="vendedores_lista.php">Clientes</a></li>
-              <li><a class="" href="vendedores_lista.php">Plataformas</a></li>
+              <li><a class="" href="clientes_lista.php">Clientes</a></li>
+              <li><a class="" href="plataformas_lista.php">Plataformas</a></li>
               <li><a class="" href="vendedores_lista.php">Vendedores</a></li>
             </ul>
           </li>
@@ -205,11 +205,10 @@ $con = $mysqli->query($consulta) or die($mysqli->error);
                     <thead>
                       <tr>
                         <th>ID</th>
-                        <th>Usuário</th>
+                        <th>Nome</th>
                         <th>Email</th>
-                        <th>Acesso</th>
                         <th>Plataforma</th>
-                        <th>Data expiração</th>
+                        <th>CPF</th>
                         <th>Status</th>
                       </tr>
                     </thead>
@@ -217,11 +216,10 @@ $con = $mysqli->query($consulta) or die($mysqli->error);
                       <?php while($dado = $con->fetch_array()){ ?>
                       <tr>
                         <td><?php echo $dado["usu_id"]; ?></td>
-                        <td><?php echo $dado["usu_tip_acs"]; ?></td>
                         <td><?php echo $dado["usu_nome"]; ?></td>
                         <td><?php echo $dado["usu_email"]; ?></td>
-                        <td><?php echo $dado["usu_senha"]; ?></td>
-                        <td><?php echo $dado["usu_rg"]; ?></td>
+                        <td>N/A</td>
+                        <td><?php echo $dado["usu_cpf"]; ?></td>
                         <td>Ativo</td>
                       </tr>
                       <?php } ?>

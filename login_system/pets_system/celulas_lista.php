@@ -129,8 +129,8 @@ $con = $mysqli->query($consulta) or die($mysqli->error);
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="vendedores_lista.php">Clientes</a></li>
-              <li><a class="" href="vendedores_lista.php">Plataformas</a></li>
+              <li><a class="" href="clientes_lista.php">Clientes</a></li>
+              <li><a class="" href="plataformas_lista.php">Plataformas</a></li>
               <li><a class="" href="vendedores_lista.php">Vendedores</a></li>
             </ul>
           </li>
