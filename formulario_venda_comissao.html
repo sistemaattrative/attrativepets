@@ -23,7 +23,6 @@
 				<ul class="links">
 					<li><a href="/login_system/index.php">Vendedor</a></li>
 					<li><a href="/login_system/index.php">Plataforma</a></li>
-					<li><a href="/login_system/index.php">Administrador</a></li>
 				</ul>
 			</nav>
 
@@ -39,7 +38,7 @@
 						<!-- Form -->
 						<h3>Formulário</h3>
 						
-						<form method="post" action="#">
+						<form action="/login_system/cadastrar_cliente.php" method="POST">
 							<div class="row gtr-uniform">
 								<div class="col-12 col-12-xsmall">
 									<h4>Vendedor</h4>
@@ -51,7 +50,7 @@
 									<h4>Cliente</h4>
 								</div>
 								<div class="col-6 col-12-xsmall">
-									<input type="text" name="name" id="name" value="" placeholder="Nome" />
+									<input type="text" name="nome" id="nome" value="" placeholder="Nome" />
 								</div>
 								<div class="col-6 col-12-xsmall">
 									<input type="text" name="email" id="email" value="" placeholder="Email" />
@@ -63,65 +62,65 @@
 									<input type="text" name="rg" id="rg" value="" placeholder="RG" />
 								</div>
 								<div class="col-6 col-12-xsmall">
-									<input type="text" name="name" id="name" value="" placeholder="Orgão Emissor" />
+									<input type="text" name="orgao_emissor" id="orgao_emissor" value="" placeholder="Orgão Emissor" />
 								</div>
 								<div class="col-6 col-12-xsmall">
-									<input type="email" name="email" id="email" value="" placeholder="Data expedição" />
+									<input type="text" name="data_expedicao" id="data_expedicao" value="" placeholder="Data expedição" />
 								</div>
 								<div class="col-6 col-12-xsmall">
-									<input type="text" name="name" id="name" value="" placeholder="Data Nascimento" />
+									<input type="text" name="data_nascimento" id="data_nascimento" value="" placeholder="Data Nascimento" />
 								</div>
 								<div class="col-6 col-12-xsmall">
-									<input type="email" name="email" id="email" value="" placeholder="Estado Civil" />
+									<input type="text" name="estado_civil" id="estado_civil" value="" placeholder="Estado Civil" />
 								</div>
 								<div class="col-6 col-12-xsmall">
-									<input type="text" name="name" id="name" value="" placeholder="Gênero" />
+									<input type="text" name="genero" id="genero" value="" placeholder="Gênero" />
 								</div>
 								<div class="col-6 col-12-xsmall">
-									<input type="email" name="email" id="email" value="" placeholder="Telefone 1" />
+									<input type="text" name="telefone1" id="telefone1" value="" placeholder="Telefone 1" />
 								</div>
 								<div class="col-6 col-12-xsmall">
-									<input type="text" name="name" id="name" value="" placeholder="Telefone 2" />
+									<input type="text" name="telefone2" id="telefone2" value="" placeholder="Telefone 2" />
 								</div>
 								<div class="col-6 col-12-xsmall">
-									<input type="email" name="email" id="email" value="" placeholder="Nome da mãe" />
+									<input type="text" name="nome_mae" id="nome_mae" value="" placeholder="Nome da mãe" />
 								</div>
 								<div class="col-6 col-12-xsmall">
-									<input type="text" name="name" id="name" value="" placeholder="Nome do pai" />
+									<input type="text" name="nome_pai" id="nome_pai" value="" placeholder="Nome do pai" />
 								</div>
 								<div class="col-6 col-12-xsmall">
-									<input type="email" name="email" id="email" value="" placeholder="CEP" />
+									<input type="text" name="cep" id="cep" value="" placeholder="CEP" />
 								</div>
 								<div class="col-6 col-12-xsmall">
-									<input type="text" name="name" id="name" value="" placeholder="Endereço" />
+									<input type="text" name="endereco" id="endereco" value="" placeholder="Endereço" />
 								</div>
 								<div class="col-6 col-12-xsmall">
-									<input type="email" name="email" id="email" value="" placeholder="Bairro" />
+									<input type="text" name="bairro" id="bairro" value="" placeholder="Bairro" />
 								</div>
 								<div class="col-6 col-12-xsmall">
-									<input type="text" name="name" id="name" value="" placeholder="Numero" />
+									<input type="text" name="numero" id="numero" value="" placeholder="Numero" />
 								</div>
 								<div class="col-6 col-12-xsmall">
-									<input type="email" name="email" id="email" value="" placeholder="Complemento" />
+									<input type="text" name="complemento" id="complemento" value="" placeholder="Complemento" />
 								</div>
 								<div class="col-6 col-12-xsmall">
-									<input type="text" name="name" id="name" value="" placeholder="Estado" />
+									<input type="text" name="estado" id="estado" value="" placeholder="Estado" />
 								</div>
 								<div class="col-6 col-12-xsmall">
-									<input type="email" name="email" id="email" value="" placeholder="Cidade" />
+									<input type="text" name="cidade" id="cidade" value="" placeholder="Cidade" />
 								</div>
 								<div class="col-6 col-12-xsmall">
-									<input type="text" name="name" id="name" value="" placeholder="Profissão" />
+									<input type="text" name="profissão" id="profissão" value="" placeholder="Profissão" />
 								</div>
 								<div class="col-6 col-12-xsmall">
-									<input type="email" name="email" id="email" value="" placeholder="Renda" />
+									<input type="text" name="renda" id="renda" value="" placeholder="Renda" />
 								</div>
 								<div class="col-6 col-12-xsmall">
-									<input type="text" name="name" id="name" value="" placeholder="Pessoa politicamente exposta" />
+									<input type="text" name="pessoa_exposta" id="pessoa_exposta" value="" placeholder="Pessoa politicamente exposta" />
 								</div>
 								<!-- Break -->
 								<div class="col-12">
-									<select name="category" id="category">
+									<select name="cartao" id="cartao">
 										<option value="">- Selecione -</option>
 										<option value="1">Cartão Silver</option>
 										<option value="2">Cartão Gold</option>
