@@ -1,3 +1,11 @@
+<?php
+session_start();
+include('../conexao.php');
+
+$consulta = "SELECT * FROM attr_planos";
+$con = $mysqli->query($consulta) or die($mysqli->error);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +17,7 @@
   <meta name="keyword" content="">
   <link rel="shortcut icon" href="img/favicon.png">
 
-  <title>Home | ATTRPETS</title>
+  <title>Planos | ATTRPETS</title>
 
   <!-- Bootstrap CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -163,14 +171,63 @@
           <div class="col-lg-12">
             <ol class="breadcrumb">
               <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
+              <li><i class="icon_tags_alt"></i>Planos</li>
+              <li>Lista</li>
             </ol>
-            <h3>Olá, Administrador. Seja bem-vindo!</h3>
+            <h3>Planos</h3> <!-- Variável de nome de usuário vem aqui -->
           </div>
         </div>
         <!-- page start-->
-
-        <!-- Page content goes here -->
-
+        <a class="btn btn-info" href="" style="background-color: green; position: relative; float: right;" title="Bootstrap 3 themes generator">Atualizar</a>
+        <a class="btn btn-info" href="planos_cadastro.html" style="position: relative; float: right;" title="Bootstrap 3 themes generator">Novo</a>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-lg-12">
+              <section class="panel">
+                <div style="float: right;" class="nav search-row" id="top_menu">
+                  <br>
+                  <!--  search form start -->
+                  <ul class="nav top-menu">
+                    <li>
+                      <form class="navbar-form">
+                        <input class="form-control" placeholder="Search" type="text">
+                      </form>
+                    </li>
+                  </ul>
+                  <!--  search form end -->
+                </div>
+                <header class="panel-heading">
+                  Lista
+                </header>
+                <div class="table-responsive">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>ID</th>
+                        <th>Plano</th>
+                        <th>Descritivo</th>
+                        <th>Valor</th>
+                        <th>Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <?php while($dado = $con->fetch_array()){ ?>
+                      <tr>
+                        <td><?php echo $dado["id"]; ?></td>
+                        <td><?php echo $dado["plano"]; ?></td>
+                        <td><?php echo $dado["descritivo"]; ?></td>
+                        <td><?php echo $dado["valor"]; ?></td>
+                        <td><?php echo $dado["status"]; ?></td>
+                      </tr>
+                      <?php } ?>
+                    </tbody>
+                  </table>
+                </div>
+  
+              </section>
+            </div>
+          </div>
         <!-- page end-->
       </section>
     </section>

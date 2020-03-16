@@ -1,3 +1,11 @@
+<?php
+session_start();
+include('../conexao.php');
+
+$consulta = "SELECT * FROM attr_usuario";
+$con = $mysqli->query($consulta) or die($mysqli->error);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +17,7 @@
   <meta name="keyword" content="">
   <link rel="shortcut icon" href="img/favicon.png">
 
-  <title>Células | ATTRPETS</title>
+  <title>Usuários - Vendedores | ATTRPETS</title>
 
   <!-- Bootstrap CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -90,7 +98,7 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="celulas_lista.html">Células</a></li>
+              <li><a class="" href="celulas_lista.php">Células</a></li>
             </ul>
           </li>
           <li class="sub-menu">
@@ -100,8 +108,8 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="beneficios_lista.html">Benefícios</a></li>
-              <li><a class="" href="planos_lista.html">Planos</a></li>
+              <li><a class="" href="beneficios_lista.php">Benefícios</a></li>
+              <li><a class="" href="planos_lista.php">Planos</a></li>
             </ul>
           </li>
           <li class="sub-menu">
@@ -111,7 +119,7 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="plataformas_lista.html">Plataformas</a></li>
+              <li><a class="" href="plataformas_lista.php">Plataformas</a></li>
             </ul>
           </li>
           <li class="sub-menu">
@@ -121,10 +129,9 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="usuarios_lista.php">Admin Sistema</a></li>
-              <li><a class="" href="usuarios_lista.php">Admin Plataforma</a></li>
-              <li><a class="" href="usuarios_lista.php">Vendedores</a></li>
-              <li><a class="" href="usuarios_lista.php">Clientes</a></li>
+              <li><a class="" href="clientes_lista.php">Clientes</a></li>
+              <li><a class="" href="plataformas_lista.php">Plataformas</a></li>
+              <li><a class="" href="vendedores_lista.php">Vendedores</a></li>
             </ul>
           </li>
           <li class="sub-menu">
@@ -164,15 +171,15 @@
           <div class="col-lg-12">
             <ol class="breadcrumb">
               <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
-              <li><i class="icon_genius"></i>Células</li>
+              <li><i class="icon_lifesaver"></i>Usuários - Vendedores</li>
               <li>Lista</li>
             </ol>
-            <h3>Células</h3> <!-- Variável de nome de usuário vem aqui -->
+            <h3>Usuários - Vendedores</h3> <!-- Variável de nome de usuário vem aqui -->
           </div>
         </div>
         <!-- page start-->
         <a class="btn btn-info" href="" style="background-color: green; position: relative; float: right;" title="Bootstrap 3 themes generator">Atualizar</a>
-        <a class="btn btn-info" href="" style="position: relative; float: right;" title="Bootstrap 3 themes generator">Novo</a>
+        <a class="btn btn-info" href="usuarios_cadastro.html" style="position: relative; float: right;" title="Bootstrap 3 themes generator">Novo</a>
         <br>
         <br>
         <div class="row">
@@ -198,24 +205,24 @@
                     <thead>
                       <tr>
                         <th>ID</th>
-                        <th>Célula</th>
-                        <th>Observações</th>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Plataforma</th>
+                        <th>CPF</th>
                         <th>Status</th>
                       </tr>
                     </thead>
                     <tbody>
+                      <?php while($dado = $con->fetch_array()){ ?>
                       <tr>
-                        <td>1</td>
-                        <td>Célula principal</td>
+                        <td><?php echo $dado["usu_id"]; ?></td>
+                        <td><?php echo $dado["usu_nome"]; ?></td>
+                        <td><?php echo $dado["usu_email"]; ?></td>
                         <td>N/A</td>
+                        <td><?php echo $dado["usu_cpf"]; ?></td>
                         <td>Ativo</td>
                       </tr>
-                      <tr>
-                        <td>2</td>
-                        <td>Célula principal</td>
-                        <td>N/A</td>
-                        <td>Ativo</td>
-                      </tr>
+                      <?php } ?>
                     </tbody>
                   </table>
                 </div>

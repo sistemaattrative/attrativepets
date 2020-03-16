@@ -2,7 +2,7 @@
 session_start();
 include('../conexao.php');
 
-$consulta = "SELECT * FROM attr_usuario";
+$consulta = "SELECT * FROM attr_beneficios";
 $con = $mysqli->query($consulta) or die($mysqli->error);
 ?>
 
@@ -17,7 +17,7 @@ $con = $mysqli->query($consulta) or die($mysqli->error);
   <meta name="keyword" content="">
   <link rel="shortcut icon" href="img/favicon.png">
 
-  <title>Usuários | ATTRPETS</title>
+  <title>Benefícios | ATTRPETS</title>
 
   <!-- Bootstrap CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -98,7 +98,7 @@ $con = $mysqli->query($consulta) or die($mysqli->error);
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="celulas_lista.html">Células</a></li>
+              <li><a class="" href="celulas_lista.php">Células</a></li>
             </ul>
           </li>
           <li class="sub-menu">
@@ -108,8 +108,8 @@ $con = $mysqli->query($consulta) or die($mysqli->error);
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="beneficios_lista.html">Benefícios</a></li>
-              <li><a class="" href="planos_lista.html">Planos</a></li>
+              <li><a class="" href="beneficios_lista.php">Benefícios</a></li>
+              <li><a class="" href="planos_lista.php">Planos</a></li>
             </ul>
           </li>
           <li class="sub-menu">
@@ -119,7 +119,7 @@ $con = $mysqli->query($consulta) or die($mysqli->error);
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="plataformas_lista.html">Plataformas</a></li>
+              <li><a class="" href="plataformas_lista.php">Plataformas</a></li>
             </ul>
           </li>
           <li class="sub-menu">
@@ -129,10 +129,9 @@ $con = $mysqli->query($consulta) or die($mysqli->error);
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="usuarios_lista.php">Admin Sistema</a></li>
-              <li><a class="" href="usuarios_lista.php">Admin Plataforma</a></li>
-              <li><a class="" href="usuarios_lista.php">Vendedores</a></li>
-              <li><a class="" href="usuarios_lista.php">Clientes</a></li>
+              <li><a class="" href="clientes_lista.php">Clientes</a></li>
+              <li><a class="" href="plataformas_lista.php">Plataformas</a></li>
+              <li><a class="" href="vendedores_lista.php">Vendedores</a></li>
             </ul>
           </li>
           <li class="sub-menu">
@@ -172,15 +171,15 @@ $con = $mysqli->query($consulta) or die($mysqli->error);
           <div class="col-lg-12">
             <ol class="breadcrumb">
               <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
-              <li><i class="icon_lifesaver"></i>Usuários</li>
-              <li>Lista</li>
+              <li><i class="icon_tags_alt"></i>Planos</li>
+              <li>Benefícios</li>
             </ol>
-            <h3>Usuários</h3> <!-- Variável de nome de usuário vem aqui -->
+            <h3>Benefícios</h3> <!-- Variável de nome de usuário vem aqui -->
           </div>
         </div>
         <!-- page start-->
         <a class="btn btn-info" href="" style="background-color: green; position: relative; float: right;" title="Bootstrap 3 themes generator">Atualizar</a>
-        <a class="btn btn-info" href="usuarios_cadastro.html" style="position: relative; float: right;" title="Bootstrap 3 themes generator">Novo</a>
+        <a class="btn btn-info" href="beneficios_cadastro.html" style="position: relative; float: right;" title="Bootstrap 3 themes generator">Novo</a>
         <br>
         <br>
         <div class="row">
@@ -206,24 +205,18 @@ $con = $mysqli->query($consulta) or die($mysqli->error);
                     <thead>
                       <tr>
                         <th>ID</th>
-                        <th>Usuário</th>
-                        <th>Email</th>
-                        <th>Acesso</th>
-                        <th>Plataforma</th>
-                        <th>Data expiração</th>
+                        <th>Benefício</th>
+                        <th>Valor</th>
                         <th>Status</th>
                       </tr>
                     </thead>
                     <tbody>
                       <?php while($dado = $con->fetch_array()){ ?>
                       <tr>
-                        <td><?php echo $dado["usu_id"]; ?></td>
-                        <td><?php echo $dado["usu_tip_acs"]; ?></td>
-                        <td><?php echo $dado["usu_nome"]; ?></td>
-                        <td><?php echo $dado["usu_email"]; ?></td>
-                        <td><?php echo $dado["usu_senha"]; ?></td>
-                        <td><?php echo $dado["usu_rg"]; ?></td>
-                        <td>Ativo</td>
+                        <td><?php echo $dado["ben_id"]; ?></td>
+                        <td><?php echo $dado["ben_nome"]; ?></td>
+                        <td><?php echo $dado["ben_valor"]; ?></td>
+                        <td><?php echo $dado["ben_status_id"]; ?></td>
                       </tr>
                       <?php } ?>
                     </tbody>

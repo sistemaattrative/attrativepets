@@ -9,7 +9,7 @@
   <meta name="keyword" content="">
   <link rel="shortcut icon" href="img/favicon.png">
 
-  <title>Vendedores | ATTRPETS</title>
+  <title>Clientes | ATTRPETS</title>
 
   <!-- Bootstrap CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -164,10 +164,10 @@
           <div class="col-lg-12">
             <ol class="breadcrumb">
               <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
-              <li><i class="icon_lifesaver"></i>Vendedores</li>
+              <li><i class="icon_lifesaver"></i>Clientes</li>
               <li>Cadastro/Edição</li>
             </ol>
-            <h3>Vendedores</h3> <!-- Variável de nome de usuário vem aqui -->
+            <h3>Clientes</h3> <!-- Variável de nome de usuário vem aqui -->
           </div>
         </div>
         <!-- page start-->
@@ -186,7 +186,7 @@
                   <h3><b>Editando registro #1</b></h3>
                   <h4><b>Criado:</b> Administrador (25/01/2020 17:10)</h4>
                   <h4><b>Editado:</b> Administrador (25/01/2020 17:10)</h4>
-                  <form action="../cadastrar_vendedores.php" method="POST">
+                  <form action="../cadastrar_cliente.php" method="POST">
                     <br>
                     <label class="col-sm-2 control-label"><b>Pode editar</b></label>
                     <div class="col-sm-10">
@@ -199,31 +199,131 @@
                     <div class="form-group">
                       <label class="col-sm-2 control-label"><b>ID</b></label>
                       <div class="col-sm-10">
-                        <input type="text" class="form-control round-input" name="usu_id">
-                      </div>
-                      <br><br>
-                      <label class="col-sm-2 control-label"><b>Tipo acesso</b></label>
-                      <div class="col-sm-10">
-                        <input type="text" class="form-control round-input" name="usu_tip_acs">
+                        <input type="text" class="form-control round-input" name="id">
                       </div>
                       <br><br>
                       <label class="col-sm-2 control-label"><b>Nome</b></label>
                       <div class="col-sm-10">
-                        <input type="text" class="form-control round-input" name="usu_nome">
+                        <input type="text" class="form-control round-input" name="nome">
                       </div>
                       <label class="col-sm-2 control-label"><b>Email</b></label>
                       <div class="col-sm-10">
-                        <input type="text" class="form-control round-input" name="usu_email">
-                      </div>
-                      <br><br>
-                      <label class="col-sm-2 control-label"><b>Senha</b></label>
-                      <div class="col-sm-10">
-                        <input type="text" class="form-control round-input" name="usu_senha">
+                        <input type="text" class="form-control round-input" name="email">
                       </div>
                       <br><br>
                       <label class="col-sm-2 control-label"><b>CPF</b></label>
                       <div class="col-sm-10">
-                        <input type="text" class="form-control round-input" name="usu_cpf">
+                        <input type="text" class="form-control round-input" name="cpf">
+                      </div>
+                      <br><br>
+                      <label class="col-sm-2 control-label"><b>RG</b></label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control round-input" name="rg">
+                      </div>
+                      <br><br>
+                      <label class="col-sm-2 control-label"><b>Orgão emissor</b></label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control round-input" name="orgao_emissor">
+                      </div>
+                      <br><br>
+                      <label class="col-sm-2 control-label"><b>Data expedição</b></label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control round-input" name="data_expedicao">
+                      </div>
+                      <br><br>
+                      <label class="col-sm-2 control-label"><b>Data nascimento</b></label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control round-input" name="data_nascimento">
+                      </div>
+                      <br><br>
+                      <label class="col-sm-2 control-label"><b>Estado civil</b></label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control round-input" name="estado_civil">
+                      </div>
+                      <br><br>
+                      <label class="col-sm-2 control-label"><b>Gênero</b></label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control round-input" name="genero">
+                      </div>  
+                      <br><br>
+                      <label class="col-sm-2 control-label"><b>Telefone 1</b></label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control round-input" name="telefone1">
+                      </div>
+                      <br><br>
+                      <label class="col-sm-2 control-label"><b>Telefone 2</b></label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control round-input" name="telefone2">
+                      </div>
+                      <br><br>
+                      <label class="col-sm-2 control-label"><b>Nome da mãe</b></label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control round-input" name="nome_mae">
+                      </div>
+                      <br><br>
+                      <label class="col-sm-2 control-label"><b>Nome do pai</b></label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control round-input" name="nome_pai">
+                      </div>
+                      <br><br>
+                      <label class="col-sm-2 control-label"><b>CEP</b></label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control round-input" name="cep">
+                      </div>
+                      <br><br>
+                      <label class="col-sm-2 control-label"><b>Endereço</b></label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control round-input" name="endereco">
+                      </div>
+                      <br><br>
+                      <label class="col-sm-2 control-label"><b>Bairro</b></label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control round-input" name="bairro">
+                      </div>
+                      <br><br>
+                      <label class="col-sm-2 control-label"><b>Número</b></label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control round-input" name="numero">
+                      </div>
+                      <br><br>
+                      <label class="col-sm-2 control-label"><b>Complemento</b></label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control round-input" name="complemento">
+                      </div>
+                      <br><br>
+                      <label class="col-sm-2 control-label"><b>Estado</b></label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control round-input" name="estado">
+                      </div>
+                      <br><br>
+                      <label class="col-sm-2 control-label"><b>Cidade</b></label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control round-input" name="cidade">
+                      </div>
+                      <br><br>
+                      <label class="col-sm-2 control-label"><b>Profissão</b></label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control round-input" name="profissão">
+                      </div>
+                      <br><br>
+                      <label class="col-sm-2 control-label"><b>Renda</b></label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control round-input" name="renda">
+                      </div>
+                      <br><br>
+                      <label class="col-sm-2 control-label"><b>Pessoa politicamente exposta</b></label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control round-input" name="pessoa_exposta">
+                      </div>
+                      <br><br>
+                      <label class="col-sm-2 control-label"><b>Cartão</b></label>
+                      <div class="col-sm-10">
+                        <select name="cartao" id="cartao">
+                          <option value="">- Selecione -</option>
+                          <option value="1">Cartão Silver</option>
+                          <option value="2">Cartão Gold</option>
+                          <option value="3">Cartão Black</option>
+                        </select>
                       </div>
                       <label class="col-sm-2 control-label"><b>Inativo</b></label>
                       <div class="col-sm-10">

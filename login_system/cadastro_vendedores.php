@@ -26,7 +26,7 @@
                         <p>O usuário escolhido já existe. Informe outro e tente novamente.</p>
                     </div>
                     <div class="box">
-                        <form action="cadastrar.php" method="POST">
+                        <form action="cadastrar_vendedores.php" method="POST">
                             <div class="field">
                                 <div class="control">
                                     <input name="nome" type="text" class="input is-large" placeholder="Nome" autofocus>
