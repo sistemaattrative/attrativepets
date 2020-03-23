@@ -7,6 +7,10 @@
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	</head>
 	<body class="is-preload">
 
@@ -147,12 +151,13 @@
 								-->
 								<!-- Break -->
 								<div class="col-6 col-12-small">
-									<input type="checkbox" id="checkbox-alpha" name="checkbox">
-									<label for="checkbox-alpha">Receber email sobre novidades</label>
+									<!-- Button trigger modal -->
+									<button type="button" data-toggle="modal" data-target="#exampleModalCenter">Ler os termos de responsabilidade</button>
 								</div>
 								<div class="col-6 col-12-small">
 									<input type="checkbox" id="checkbox-beta" name="checkbox" checked>
 									<label for="checkbox-beta">Aceito os termos de responsabilidade</label>
+									
 								</div>
 								<!-- Break -->
 								<!--
@@ -172,6 +177,49 @@
 					</div>
 				</div>
 			</section>
+
+			<!-- Modal -->
+			<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					</div>
+					<div class="modal-body">
+					...
+					</div>
+					<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary">Save changes</button>
+					</div>
+				</div>
+				</div>
+			</div>
+
+		<!-- Modal -->
+		<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLongTitle">Termos de Responsabilidade</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				</div>
+				<div class="modal-body">
+				Declaro, que estou ciente e de acordo, sob pena de perda de direito de cobertura, conforme previsto no artigo 766 do Código Civil, que: As informações prestadas são verdadeiras e completas.
+				O não pagamento da mensalidade em dia implicará na perda e da utilização das coberturas. Tomei o conhecimento prévio das condições gerais do produto, que também estará disponível no site www.attrative.com.br<br>
+				DENTRO DAS CONDIÇÕES DE ACEITAÇÃO DA ATTRATIVE
+				</div>
+				<div class="modal-footer">
+				<button type="button" data-dismiss="modal">Fechar</button>
+				</div>
+			</div>
+			</div>
+		</div>
 
 		<!-- Footer -->
 		<footer id="footer">

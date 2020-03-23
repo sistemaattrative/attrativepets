@@ -42,8 +42,8 @@ $con = $mysqli->query($consulta) or die($mysqli->error);
 						ATTR PET
 					</span>
 
-					<div class="wrap-input100 validate-input m-b-16" data-validate = "CPF ou CNPJ é obrigatório">
-						<input class="input100" type="text" id="login" name="login" placeholder="CPF / CNPJ">
+					<div class="wrap-input100 validate-input m-b-16" data-validate = "Usuário é obrigatório">
+						<input class="input100" type="text" id="login" name="login" placeholder="Usuário">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<span class="fa fa-id-card-o"></span>
