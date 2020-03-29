@@ -67,7 +67,7 @@
                 <a href="#"><i class="icon_profile"></i> My Profile</a>
               </li>
               <li>
-                <a href="../index.php"><i class="icon_key_alt"></i> Log Out</a>
+                <a href="/index.html"><i class="icon_key_alt"></i> Log Out</a>
               </li>
             </ul>
           </li>
@@ -133,23 +133,10 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="../../formulario_venda_comissao.html">Realizar venda</a></li>
+              <li><a class="" href="../../formulario_venda_comissao.php">Realizar venda</a></li>
             </ul>
           </li>
-          <li class="sub-menu">
-            <a href="javascript:;" class="">
-                          <i class="icon_documents_alt"></i>
-                          <span>Relatórios</span>
-                          <span class="menu-arrow arrow_carrot-right"></span>
-                      </a>
-            <ul class="sub">
-              <li><a class="" href="relatorios_consolidado.html">Comissão (célula)</a></li>
-              <li><a class="" href="relatorios_consolidado.html">Comissão (plataforma)</a></li>
-              <li><a class="" href="relatorios_consolidado.html">Consolidado</a></li>
-              <li><a class="" href="relatorios_consolidado.html">Pagamentos</a></li>
-              <li><a class="" href="relatorios_consolidado.html">Vendas concretizadas</a></li>
-            </ul>
-          </li>
+          
         </ul>
         <!-- sidebar menu end-->
       </div>
@@ -159,20 +146,142 @@
     <!--main content start-->
     <section id="main-content">
       <section class="wrapper">
+        <!--overview start-->
         <div class="row">
           <div class="col-lg-12">
+            <h3 class="page-header"><i class="fa fa-laptop"></i> Dashboard</h3>
             <ol class="breadcrumb">
               <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
+              <li><i class="fa fa-laptop"></i>Dashboard</li>
             </ol>
-            <h3>Olá, Administrador. Seja bem-vindo!</h3>
           </div>
         </div>
-        <!-- page start-->
 
-        <!-- Page content goes here -->
+        <div class="row">
+          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+            <div class="info-box blue-bg">
+              <i class="fa fa-cloud-download"></i>
+              <div class="count">6.674</div>
+              <div class="title">Plataformas</div>
+            </div>
+            <!--/.info-box-->
+          </div>
+          <!--/.col-->
 
-        <!-- page end-->
+          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+            <div class="info-box brown-bg">
+              <i class="fa fa-shopping-cart"></i>
+              <div class="count">7.538</div>
+              <div class="title">Vendas</div>
+            </div>
+            <!--/.info-box-->
+          </div>
+          <!--/.col-->
+
+          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+            <div class="info-box dark-bg">
+              <i class="fa fa-thumbs-o-up"></i>
+              <div class="count">4.362</div>
+              <div class="title">Clientes ativos</div>
+            </div>
+            <!--/.info-box-->
+          </div>
+          <!--/.col-->
+
+          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+            <div class="info-box green-bg">
+              <i class="fa fa-cubes"></i>
+              <div class="count">1.426</div>
+              <div class="title">Pagamentos Vencidos</div>
+            </div>
+            <!--/.info-box-->
+          </div>
+          <!--/.col-->
+
+        </div>
+        <!--/.row-->
+
+        <!-- Today status end -->
+
+        <div class="row">
+
+          <div class="col-lg-9 col-md-12">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h2><i class="fa fa-flag-o red"></i><strong>Registered Users</strong></h2>
+                <div class="panel-actions">
+                  <a href="index.html#" class="btn-setting"><i class="fa fa-rotate-right"></i></a>
+                  <a href="index.html#" class="btn-minimize"><i class="fa fa-chevron-up"></i></a>
+                  <a href="index.html#" class="btn-close"><i class="fa fa-times"></i></a>
+                </div>
+              </div>
+              <div class="panel-body">
+                <table class="table bootstrap-datatable countries">
+                  <thead>
+                    <tr>
+                      <th>Plataformas</th>
+                      <th>Clientes</th>
+                      <th>Ativos</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>ABC Company</td>
+                      <td>2563</td>
+                      <td>1025</td>
+                    </tr>
+                    <tr>
+                      <td>XYZ Company</td>
+                      <td>3652</td>
+                      <td>2563</td>
+                    </tr>
+                    <tr>
+                      <td>PAA Company</td>
+                      <td>562</td>
+                      <td>452</td>
+                    </tr>
+                    <tr>
+                      <td>POO Company</td>
+                      <td>1258</td>
+                      <td>958</td>
+                    </tr>
+                    <tr>
+                      <td>MNC Company</td>
+                      <td>4856</td>
+                      <td>3621</td>
+                    </tr>
+                    <tr>
+                      <td>LUM Company</td>
+                      <td>265</td>
+                      <td>102</td>
+                    </tr>
+                    <tr>
+                      <td>RTM Company</td>
+                      <td>265</td>
+                      <td>102</td>
+                    </tr>
+                    <tr>
+                      <td>CFM Company</td>
+                      <td>265</td>
+                      <td>102</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+            </div>
+
+          </div>
+          <!--/col-->
+          
+          </div>
+          <!--/col-->
+
+        </div>
+        <!-- statics end -->
+
       </section>
+      
     </section>
     <!--main content end-->
     <div class="text-right">

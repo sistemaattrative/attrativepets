@@ -35,6 +35,12 @@
 				<video autoplay loop muted playsinline src="images/petsvideo.mp4"></video>
 			</section>
 
+		<!-- Form -->
+			<form id="form_comissao" action="/formulario_venda_comissao.php" method="POST">
+				<input type="hidden" id="cpfcnpj" name="cpfcnpj" value="99999999999999">
+				<!-- <button type="submit" class="btn btn-info" style="background-color: green; position: relative; float: right;">Cadastrar</button> -->
+			</form>
+
 		<!-- Highlights -->
 			<section class="wrapper">
 				<div class="inner">
@@ -46,31 +52,31 @@
 						<section>
 							<div class="content">
 								<header>
-									<a href="/formulario_venda_direta.html"><img src="images/CartaoSilver.png" alt="" style="width: 100%;height: 100%"/></a>
+									<a id="link1" style="cursor: pointer;"><img src="images/CartaoSilver.png" alt="" style="width: 100%;height: 100%"/></a>
 									<h3>Cartão Silver</h3>
 								</header>
 								<p>Esse plano de saude coparticipativo para cachorros com mais de 9 anos, oferece desconto de até 30% em todos os procedimentos e consultas em uma rede exclusiva de atendimento, além de uma dose anual de vacinas importadas Polivalente V10 e Antirrábica.</p>
-								<a href="/formulario_venda_direta.html" class="button primary fit small">Contratar esse plano</a>
+								<a id="link2" class="button primary fit small">Contratar esse plano</a>
 							</div>
 						</section>
 						<section>
 							<div class="content">
 								<header>
-									<a href="/formulario_venda_direta.html"><img src="images/CartaoGold(2).png" alt="" style="width: 100%;height: 100%"/></a>
+									<a id="link3" style="cursor: pointer;"><img src="images/CartaoGold(2).png" alt="" style="width: 100%;height: 100%"/></a>
 									<h3>Cartão Gold</h3>
 								</header>
 								<p>Plano de saude para cachorro, que cobre consultas com clínico geral, exames laboratoriais (exceto hormonais), procedimentos ambulatoriais, atendimento domiciliar, urgências, emergências, além de uma dose anual de vacinas importadas Polivalente V10 e Antirrábica.</p>
-								<a href="/formulario_venda_direta.html" class="button primary fit small">Contratar esse plano</a>
+								<a id="link4" class="button primary fit small">Contratar esse plano</a>
 							</div>
 						</section>
 						<section>
 							<div class="content">
 								<header>
-									<a href="/formulario_venda_direta.html"><img src="images/CartaoBlack.png" alt="" style="width: 100%;height: 100%"/></a>
+									<a id="link5" style="cursor: pointer;"><img src="images/CartaoBlack.png" alt="" style="width: 100%;height: 100%"/></a>
 									<h3>Cartão Black</h3>
 								</header>
 								<p>Plano de saude para cachorro, que cobre consultas com especialistas, exames laboratoriais, procedimentos ambulatoriais, atendimento domiciliar, urgências, emergências, além de uma dose anual de vacinas importadas Polivalente V10 e Antirrábica.</p>
-								<a href="/formulario_venda_direta.html" class="button primary fit small">Contratar esse plano</a>
+								<a id="link6" class="button primary fit small">Contratar esse plano</a>
 							</div>
 						</section>
 					</div>
@@ -108,11 +114,36 @@
 			</footer>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<script>
+			document.getElementById("link1").onclick = function() {
+				document.getElementById("form_comissao").submit();
+			}
+
+			document.getElementById("link2").onclick = function() {
+				document.getElementById("form_comissao").submit();
+			}
+
+			document.getElementById("link3").onclick = function() {
+				document.getElementById("form_comissao").submit();
+			}
+
+			document.getElementById("link4").onclick = function() {
+				document.getElementById("form_comissao").submit();
+			}
+
+			document.getElementById("link5").onclick = function() {
+				document.getElementById("form_comissao").submit();
+			}
+
+			document.getElementById("link6").onclick = function() {
+				document.getElementById("form_comissao").submit();
+			}
+		</script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 
 	</body>
 </html>

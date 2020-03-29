@@ -1,4 +1,9 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE HTML>
+
 <html>
 	<head>
 		<title>Attrative Pets</title>
@@ -7,6 +12,10 @@
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	</head>
 	<body class="is-preload">
 
@@ -14,7 +23,7 @@
 		<header id="header">
 				<a class="logo" href="index.html">Attrative Pets</a>
 				<nav>
-					<a href="#menu"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a>
+					<a href="/index.html"><i class="fa fa-sign-out" aria-hidden="true"></i> Sair</a>
 				</nav>
 			</header>
 
@@ -40,11 +49,8 @@
 						
 						<form action="/login_system/cadastrar_cliente.php" method="POST">
 							<div class="row gtr-uniform">
-								<div class="col-12 col-12-xsmall">
-									<h4>Vendedor</h4>
-								</div>
 								<div class="col-6 col-12-xsmall">
-									<input type="text" name="name" id="name" value="" placeholder="CPF/CPNJ Vendedor/Plataforma" />
+									<input type="hidden" name="vendedor" id="vendedor" placeholder="CPF/CPNJ Vendedor/Plataforma" value="<?php if($_POST['cpfcnpj']){echo $_POST['cpfcnpj'];}else{ echo $_SESSION['cpfcnpj'];} ?>"/>
 								</div>
 								<div class="col-12 col-12-xsmall">
 									<h4>Cliente</h4>
@@ -118,13 +124,40 @@
 								<div class="col-6 col-12-xsmall">
 									<input type="text" name="pessoa_exposta" id="pessoa_exposta" value="" placeholder="Pessoa politicamente exposta" />
 								</div>
-								<!-- Break -->
+								<div class="col-6 col-12-xsmall">
+									<input type="password" name="pessoa_exposta" id="pessoa_exposta" value="" placeholder="Senha" />
+								</div>
+
 								<div class="col-12">
 									<select name="cartao" id="cartao">
-										<option value="">- Selecione -</option>
+										<option value="">- Selecione o plano -</option>
 										<option value="1">Cartão Silver</option>
 										<option value="2">Cartão Gold</option>
 										<option value="3">Cartão Black</option>
+									</select>
+								</div>
+
+								<div class="col-12">
+									<select name="tipoPagamento" id="tipoPagamento">
+										<option value="">- Selecione o tipo de pagamento -</option>
+										<option value="1">Cartão de Crédito</option>
+										<option value="2">Boleto</option>
+									</select>
+								</div>
+
+								<div class="col-6 col-12-xsmall">
+									<p>Data de vencimento</p>
+									<input type="text" name="dataVencimento" id="dataVencimento" value="<?php echo date('d/m/y', strtotime('+3 days')); ?>"/>
+								</div>
+
+								<div class="col-12">
+									<select name="proximoVencimento" id="proximoVencimento">
+										<option value="">- Selecione o próximo dia de vencimento -</option>
+										<option value="5">Todo dia 05</option>
+										<option value="10">Todo dia 10</option>
+										<option value="15">Todo dia 15</option>
+										<option value="20">Todo dia 20</option>
+										<option value="25">Todo dia 25</option>
 									</select>
 								</div>
 								<!-- Break -->
@@ -147,11 +180,11 @@
 								-->
 								<!-- Break -->
 								<div class="col-6 col-12-small">
-									<input type="checkbox" id="checkbox-alpha" name="checkbox">
-									<label for="checkbox-alpha">Receber email sobre novidades</label>
+									<!-- Button trigger modal -->
+									<button type="button" data-toggle="modal" data-target="#exampleModalCenter">Ler os termos de responsabilidade</button>
 								</div>
 								<div class="col-6 col-12-small">
-									<input type="checkbox" id="checkbox-beta" name="checkbox" checked>
+									<input type="checkbox" id="checkbox-beta" name="termo" value="true" checked>
 									<label for="checkbox-beta">Aceito os termos de responsabilidade</label>
 								</div>
 								<!-- Break -->
@@ -172,6 +205,49 @@
 					</div>
 				</div>
 			</section>
+
+			<!-- Modal -->
+			<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					</div>
+					<div class="modal-body">
+					...
+					</div>
+					<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary">Save changes</button>
+					</div>
+				</div>
+				</div>
+			</div>
+
+		<!-- Modal -->
+		<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLongTitle">Termos de Responsabilidade</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				</div>
+				<div class="modal-body">
+				Declaro, que estou ciente e de acordo, sob pena de perda de direito de cobertura, conforme previsto no artigo 766 do Código Civil, que: As informações prestadas são verdadeiras e completas.
+				O não pagamento da mensalidade em dia implicará na perda e da utilização das coberturas. Tomei o conhecimento prévio das condições gerais do produto, que também estará disponível no site www.attrative.com.br<br>
+				DENTRO DAS CONDIÇÕES DE ACEITAÇÃO DA ATTRATIVE
+				</div>
+				<div class="modal-footer">
+				<button type="button" data-dismiss="modal">Fechar</button>
+				</div>
+			</div>
+			</div>
+		</div>
 
 		<!-- Footer -->
 		<footer id="footer">
