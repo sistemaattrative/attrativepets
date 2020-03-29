@@ -75,7 +75,7 @@ $con = $mysqli->query($consulta) or die($mysqli->error);
                 <a href="#"><i class="icon_profile"></i> My Profile</a>
               </li>
               <li>
-                <a href="../index.php"><i class="icon_key_alt"></i> Log Out</a>
+                <a href="/index.html"><i class="icon_key_alt"></i> Log Out</a>
               </li>
             </ul>
           </li>
@@ -141,7 +141,7 @@ $con = $mysqli->query($consulta) or die($mysqli->error);
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="../../formulario_venda_comissao.html">Realizar venda</a></li>
+              <li><a class="" href="../../formulario_venda_comissao.php">Realizar venda</a></li>
             </ul>
           </li>
           

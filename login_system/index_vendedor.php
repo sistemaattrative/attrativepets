@@ -37,7 +37,7 @@ $con = $mysqli->query($consulta) or die($mysqli->error);
 		<div class="container-login100">
 			<div class="wrap-login100 p-l-50 p-r-50 p-t-77 p-b-30">
                             
-				<form action="/login_system/verifica_login.php" method="POST" class="login100-form validate-form">
+				<form action="/login_system/verifica_login_vendedor.php" method="POST" class="login100-form validate-form">
 					<span class="login100-form-title p-b-55">
 						ATTR PET
 					</span>

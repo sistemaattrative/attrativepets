@@ -1,4 +1,9 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE HTML>
+
 <html>
 	<head>
 		<title>Attrative Pets</title>
@@ -18,7 +23,7 @@
 		<header id="header">
 				<a class="logo" href="index.html">Attrative Pets</a>
 				<nav>
-					<a href="#menu"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a>
+					<a href="/index.html"><i class="fa fa-sign-out" aria-hidden="true"></i> Sair</a>
 				</nav>
 			</header>
 
@@ -44,11 +49,8 @@
 						
 						<form action="/login_system/cadastrar_cliente.php" method="POST">
 							<div class="row gtr-uniform">
-								<div class="col-12 col-12-xsmall">
-									<h4>Vendedor</h4>
-								</div>
 								<div class="col-6 col-12-xsmall">
-									<input type="text" name="vendedor" id="vendedor" placeholder="CPF/CPNJ Vendedor/Plataforma" />
+									<input type="hidden" name="vendedor" id="vendedor" placeholder="CPF/CPNJ Vendedor/Plataforma" value="<?php if($_POST['cpfcnpj']){echo $_POST['cpfcnpj'];}else{ echo $_SESSION['cpfcnpj'];} ?>"/>
 								</div>
 								<div class="col-12 col-12-xsmall">
 									<h4>Cliente</h4>
@@ -122,13 +124,40 @@
 								<div class="col-6 col-12-xsmall">
 									<input type="text" name="pessoa_exposta" id="pessoa_exposta" value="" placeholder="Pessoa politicamente exposta" />
 								</div>
-								<!-- Break -->
+								<div class="col-6 col-12-xsmall">
+									<input type="password" name="pessoa_exposta" id="pessoa_exposta" value="" placeholder="Senha" />
+								</div>
+
 								<div class="col-12">
 									<select name="cartao" id="cartao">
-										<option value="">- Selecione -</option>
+										<option value="">- Selecione o plano -</option>
 										<option value="1">Cartão Silver</option>
 										<option value="2">Cartão Gold</option>
 										<option value="3">Cartão Black</option>
+									</select>
+								</div>
+
+								<div class="col-12">
+									<select name="tipoPagamento" id="tipoPagamento">
+										<option value="">- Selecione o tipo de pagamento -</option>
+										<option value="1">Cartão de Crédito</option>
+										<option value="2">Boleto</option>
+									</select>
+								</div>
+
+								<div class="col-6 col-12-xsmall">
+									<p>Data de vencimento</p>
+									<input type="text" name="dataVencimento" id="dataVencimento" value="<?php echo date('d/m/y', strtotime('+3 days')); ?>"/>
+								</div>
+
+								<div class="col-12">
+									<select name="proximoVencimento" id="proximoVencimento">
+										<option value="">- Selecione o próximo dia de vencimento -</option>
+										<option value="5">Todo dia 05</option>
+										<option value="10">Todo dia 10</option>
+										<option value="15">Todo dia 15</option>
+										<option value="20">Todo dia 20</option>
+										<option value="25">Todo dia 25</option>
 									</select>
 								</div>
 								<!-- Break -->
@@ -155,9 +184,8 @@
 									<button type="button" data-toggle="modal" data-target="#exampleModalCenter">Ler os termos de responsabilidade</button>
 								</div>
 								<div class="col-6 col-12-small">
-									<input type="checkbox" id="checkbox-beta" name="checkbox" checked>
+									<input type="checkbox" id="checkbox-beta" name="termo" value="true" checked>
 									<label for="checkbox-beta">Aceito os termos de responsabilidade</label>
-									
 								</div>
 								<!-- Break -->
 								<!--
