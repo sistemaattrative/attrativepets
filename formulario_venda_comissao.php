@@ -125,7 +125,7 @@ session_start();
 									<input type="text" name="pessoa_exposta" id="pessoa_exposta" value="" placeholder="Pessoa politicamente exposta" />
 								</div>
 								<div class="col-6 col-12-xsmall">
-									<input type="password" name="pessoa_exposta" id="pessoa_exposta" value="" placeholder="Senha" />
+									<input maxlength="6" type="password" name="pessoa_exposta" id="pessoa_exposta" value="" placeholder="Senha" />
 								</div>
 
 								<div class="col-12">

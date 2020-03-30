@@ -74,6 +74,6 @@ if($termo == 'true')
 
 $mysqli->close();
 
-header("Location:/login_system/pets_system/clientes_lista.php");
+header("Location:/compra_finalizada.php");
 exit;
 ?>
