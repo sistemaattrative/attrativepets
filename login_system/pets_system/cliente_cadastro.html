@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Attrative Dashboard">
+  <meta name="author" content="Attrative">
+  <meta name="keyword" content="">
+  <link rel="shortcut icon" href="img/favicon.png">
+
+  <title>Clientes | ATTRPETS</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- bootstrap theme -->
+  <link href="css/bootstrap-theme.css" rel="stylesheet">
+  <!--external css-->
+  <!-- font icon -->
+  <link href="css/elegant-icons-style.css" rel="stylesheet" />
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+  <!-- Custom styles -->
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style-responsive.css" rel="stylesheet" />
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 -->
+  <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+      <script src="js/lte-ie7.js"></script>
+    <![endif]-->
+
+    
+</head>
+
+<body>
+  <!-- container section start -->
+  <section id="container" class="">
+    <!--header start-->
+
+    <header class="header dark-bg">
+      <div class="toggle-nav">
+        <div class="icon-reorder tooltips" data-original-title="Menu" data-placement="bottom"><i class="icon_menu"></i></div>
+      </div>
+
+      <!--logo start-->
+      <a href="index.php" class="logo">ATTR<span class="lite">PET</span></a>
+      <!--logo end-->
+
+      <div class="nav search-row" id="top_menu">
+        
+      </div>
+
+      <div class="top-nav notification-row">
+        <!-- notificatoin dropdown start-->
+        <ul class="nav pull-right top-menu">
+          <!-- user login dropdown start-->
+          <li class="dropdown">
+            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            
+                            <span class="username">Administrador</span>
+                            <b class="caret"></b>
+                        </a>
+            <ul class="dropdown-menu extended logout">
+              <div class="log-arrow-up"></div>
+              <li class="eborder-top">
+                <a href="#"><i class="icon_profile"></i> My Profile</a>
+              </li>
+              <li>
+                <a href="/index.html"><i class="icon_key_alt"></i> Log Out</a>
+              </li>
+            </ul>
+          </li>
+          <!-- user login dropdown end -->
+        </ul>
+        <!-- notificatoin dropdown end-->
+      </div>
+    </header>
+    <!--header end-->
+
+    <!--sidebar start-->
+    <aside>
+      <div id="sidebar" class="nav-collapse ">
+        <!-- sidebar menu start-->
+        <ul class="sidebar-menu">
+          <li class="sub-menu">
+            <a href="javascript:;" class="">
+                          <i class="icon_genius"></i>
+                          <span>Células</span>
+                          <span class="menu-arrow arrow_carrot-right"></span>
+                      </a>
+            <ul class="sub">
+              <li><a class="" href="celulas_lista.html">Células</a></li>
+            </ul>
+          </li>
+          <li class="sub-menu">
+            <a href="javascript:;" class="">
+                          <i class="icon_tags_alt"></i>
+                          <span>Planos</span>
+                          <span class="menu-arrow arrow_carrot-right"></span>
+                      </a>
+            <ul class="sub">
+              <li><a class="" href="beneficios_lista.html">Benefícios</a></li>
+              <li><a class="" href="planos_lista.php">Planos</a></li>
+            </ul>
+          </li>
+          <li class="sub-menu">
+            <a href="javascript:;" class="">
+                          <i class="icon_lifesaver"></i>
+                          <span>Plataformas</span>
+                          <span class="menu-arrow arrow_carrot-right"></span>
+                      </a>
+            <ul class="sub">
+              <li><a class="" href="plataformas_lista.php">Plataformas</a></li>
+            </ul>
+          </li>
+          <li class="sub-menu">
+            <a href="javascript:;" class="">
+                          <i class="icon_group"></i>
+                          <span>Usuários</span>
+                          <span class="menu-arrow arrow_carrot-right"></span>
+                      </a>
+            <ul class="sub">
+              <li><a class="" href="clientes_lista.php">Clientes</a></li>
+              <li><a class="" href="plataformas_lista.php">Plataformas</a></li>
+              <li><a class="" href="vendedores_lista.php">Vendedores</a></li>
+            </ul>
+          </li>
+          <li class="sub-menu">
+            <a href="javascript:;" class="">
+                          <i class="icon_cart"></i>
+                          <span>Vendas</span>
+                          <span class="menu-arrow arrow_carrot-right"></span>
+                      </a>
+            <ul class="sub">
+              <li><a class="" href="../../formulario_venda_comissao.php">Realizar venda</a></li>
+            </ul>
+          </li>
+          
+        </ul>
+        <!-- sidebar menu end-->
+      </div>
+    </aside>
+    <!--sidebar end-->
+
+    <!--main content start-->
+    <section id="main-content">
+      <section class="wrapper">
+        <div class="row">
+          <div class="col-lg-12">
+            <ol class="breadcrumb">
+              <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
+              <li><i class="icon_lifesaver"></i>Clientes</li>
+              <li>Cadastro/Edição</li>
+            </ol>
+            <h3>Clientes</h3> <!-- Variável de nome de usuário vem aqui -->
+          </div>
+        </div>
+        <!-- page start-->
+        <div class="row">
+            <div class="col-lg-12">
+              <section class="panel">
+                <div style="float: right;" class="nav search-row" id="top_menu">
+                  <br>
+                 
+                </div>
+                <header class="panel-heading">
+                  Cadastro/Edição
+                </header>
+
+                <div class="panel-body">
+                  
+                  <form action="../cadastrar_cliente.php" method="POST">
+                    
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label"><b>Nome</b></label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control round-input" name="nome">
+                      </div>
+                      <label class="col-sm-2 control-label"><b>Email</b></label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control round-input" name="email">
+                      </div>
+                      <br><br>
+                      <label class="col-sm-2 control-label"><b>CPF</b></label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control round-input" name="cpf">
+                      </div>
+                      <br><br>
+                      <label class="col-sm-2 control-label"><b>RG</b></label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control round-input" name="rg">
+                      </div>
+                      <br><br>
+                      <label class="col-sm-2 control-label"><b>Orgão emissor</b></label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control round-input" name="orgao_emissor">
+                      </div>
+                      <br><br>
+                      <label class="col-sm-2 control-label"><b>Data expedição</b></label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control round-input" name="data_expedicao">
+                      </div>
+                      <br><br>
+                      <label class="col-sm-2 control-label"><b>Data nascimento</b></label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control round-input" name="data_nascimento">
+                      </div>
+                      <br><br>
+                      <label class="col-sm-2 control-label"><b>Estado civil</b></label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control round-input" name="estado_civil">
+                      </div>
+                      <br><br>
+                      <label class="col-sm-2 control-label"><b>Gênero</b></label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control round-input" name="genero">
+                      </div>  
+                      <br><br>
+                      <label class="col-sm-2 control-label"><b>Telefone 1</b></label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control round-input" name="telefone1">
+                      </div>
+                      <br><br>
+                      <label class="col-sm-2 control-label"><b>Telefone 2</b></label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control round-input" name="telefone2">
+                      </div>
+                      <br><br>
+                      <label class="col-sm-2 control-label"><b>Nome da mãe</b></label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control round-input" name="nome_mae">
+                      </div>
+                      <br><br>
+                      <label class="col-sm-2 control-label"><b>Nome do pai</b></label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control round-input" name="nome_pai">
+                      </div>
+                      <br><br>
+                      <label class="col-sm-2 control-label"><b>CEP</b></label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control round-input" name="cep">
+                      </div>
+                      <br><br>
+                      <label class="col-sm-2 control-label"><b>Endereço</b></label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control round-input" name="endereco">
+                      </div>
+                      <br><br>
+                      <label class="col-sm-2 control-label"><b>Bairro</b></label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control round-input" name="bairro">
+                      </div>
+                      <br><br>
+                      <label class="col-sm-2 control-label"><b>Número</b></label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control round-input" name="numero">
+                      </div>
+                      <br><br>
+                      <label class="col-sm-2 control-label"><b>Complemento</b></label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control round-input" name="complemento">
+                      </div>
+                      <br><br>
+                      <label class="col-sm-2 control-label"><b>Estado</b></label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control round-input" name="estado">
+                      </div>
+                      <br><br>
+                      <label class="col-sm-2 control-label"><b>Cidade</b></label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control round-input" name="cidade">
+                      </div>
+                      <br><br>
+                      <label class="col-sm-2 control-label"><b>Profissão</b></label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control round-input" name="profissão">
+                      </div>
+                      <br><br>
+                      <label class="col-sm-2 control-label"><b>Renda</b></label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control round-input" name="renda">
+                      </div>
+                      <br><br>
+                      <label class="col-sm-2 control-label"><b>Pessoa politicamente exposta</b></label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control round-input" name="pessoa_exposta">
+                      </div>
+                      <br><br>
+                      <label class="col-sm-2 control-label"><b>Cartão</b></label>
+                      <div class="col-sm-10">
+                        <select name="cartao" id="cartao">
+                          <option value="">- Selecione -</option>
+                          <option value="1">Cartão Silver</option>
+                          <option value="2">Cartão Gold</option>
+                          <option value="3">Cartão Black</option>
+                        </select>
+                      </div>
+                      <label class="col-sm-2 control-label"><b>Inativo</b></label>
+                      <div class="col-sm-10">
+                        <input type="checkbox" class="checkbox form-control">
+                      </div>
+                    </div>
+                    <button type="submit" class="btn btn-info" style="background-color: green; position: relative; float: right;">Cadastrar</button>
+                    <button onClick="history.forward()" class="btn btn-info" href="" style="background-color: red; position: relative; float: right;">Voltar</a>
+                  </form>
+                </div>
+
+              </section>
+            </div>
+          </div>
+        <!-- page end-->
+      </section>
+    </section>
+    <!--main content end-->
+    <div class="text-right">
+      <div class="credits">
+          
+          Designed by Attrative &emsp;
+        </div>
+    </div>
+  </section>
+  <!-- container section end -->
+  <!-- javascripts -->
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <!-- nice scroll -->
+  <script src="js/jquery.scrollTo.min.js"></script>
+  <script src="js/jquery.nicescroll.js" type="text/javascript"></script>
+  <!--custome script for all page-->
+  <script src="js/scripts.js"></script>
+
+
+</body>
+
+</html>
